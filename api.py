@@ -1,6 +1,7 @@
-from flask import Flask, request, abort
+from flask import Flask, request, abort, jsonify
 import os
 from dotenv import load_dotenv
+from chatbot import get_answer
 
 # Load the environment variables from the .env file
 load_dotenv()
