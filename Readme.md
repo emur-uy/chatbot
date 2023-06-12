@@ -19,6 +19,8 @@ Follow the steps below to install the project on your system:
 
 ```
 - Clone the repository to your local machine
+- Install dependencies with pip install -r requirements.txt
+- Run migrations with alembic upgrade head
 ```
 
 ### Testing 🔩
