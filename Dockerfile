@@ -14,13 +14,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Set environment variables
-ENV PORT 8080
+ENV PORT 5000
 ENV FLASK_APP app.py
 ENV FLASK_RUN_HOST 0.0.0.0
 
 # Give execution permissions to startup.sh and set it as the command to run when the Docker container starts
-RUN chmod a+x startup.sh
+RUN chmod +x startup.sh
 CMD ["./startup.sh"]
 
-# Create a volume for the db_docs directory
-VOLUME /usr/src/app/db_docs

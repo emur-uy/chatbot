@@ -29,7 +29,7 @@ def get_answer(question):
     # Create a question answering retrieval model
     retriever = FAISS.load_local("db_docs", OpenAIEmbeddings()).as_retriever(
         search_type="similarity",
-        search_kwargs={"k": 1}
+        search_kwargs={"k": 3}
     )
 
     # Create an instance of RetrievalQA
